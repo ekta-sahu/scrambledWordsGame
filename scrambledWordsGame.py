@@ -71,3 +71,38 @@ for i in j_words:
 
             else:
                 exit()
+                if result2 != "Lost":
+
+                    # Level 3
+
+                    print("This is Level 3")
+
+                    words3 = {1: "psychology",2: "demonstrate",3: "pneumonia",4: "homogeneous",5: "conscience"}
+
+                    j_words3 = {1: "yglopysoho",2: "omrdtneaest",3: "uenonpima",4: "esemoohgnoue",5: "sncceionse"}
+
+                    for i in j_words3:
+
+                        n = 2
+
+                        while n > 0:
+
+                            print("Your word is:", j_words3[i])
+
+                            guess = input("Enter your guessed word:")
+
+                            if words3[i] == guess:
+                                print("Bravo!")
+                                break
+
+                            else:
+                                n -= 1
+
+                                if n == 0:
+                                    print("Incorrect! you have lost the game.")
+                                    exit()
+
+                                elif n == 1:
+                                    print("Try Again")
+                                    continue
+                                break
