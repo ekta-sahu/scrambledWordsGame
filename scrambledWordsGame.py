@@ -1,8 +1,8 @@
 # Scrambled word game
 
-words = {1: "calendar",2: "dictionary",3: "atmosphere",4: "temperature",5: "laboratory"}
+words = {1: "calendar", 2: "dictionary", 3: "atmosphere", 4: "temperature", 5: "laboratory"}
 
-j_words = {1: "daelnrac",2: "troinoadiory",3: "htapseomre",4: "eatrptumere",5: "aaltrorbyo"}
+j_words = {1: "daelnrac", 2: "troinoadiory", 3: "htapseomre", 4: "eatrptumere", 5: "aaltrorbyo"}
 
 # Level 1
 
@@ -32,77 +32,83 @@ for i in j_words:
             elif n == 1:
                 print("Try Again")
                 continue
+
             break
-            if result != "Lost":
 
-                # Level 2
 
-                result2 = ""
+if result != "Lost":
 
-                print("This is Level 2")
+    # Level 2
 
-                words2 = {1: "liberty",2: "recommend",3: "guideline",4: "prohibited",5: "pharoah"}
+    result2 = ""
 
-                j_words2 = {1: "ytiberl",2: "omrcendme",3: "eglidnuei",4: "ipthorbide",5: "oahphr"}
-                for i in j_words2:
+    print("This is Level 2")
 
-                    n = 2
+    words2 = {1: "liberty", 2: "recommend", 3: "guideline", 4: "prohibited", 5: "pharoah"}
 
-                    while n > 0:
-                        print("Your word is:", j_words2[i])
+    j_words2 = {1: "ytiberl", 2: "omrcendme", 3: "eglidnuei", 4: "ipthorbide", 5: "oahphr"}
 
-                        guess = input("Enter your guessed word:")
+    for i in j_words2:
 
-                        if words2[i] == guess:
-                            print("Bravo!")
-                            break
+        n = 2
 
-                        else:
-                            n -= 1
+        while n > 0:
+            print("Your word is:", j_words2[i])
 
-                            if n == 0:
-                                print("Incorrect! you have lost the game.")
-                                result2 += "Lost"
-                                exit()
-                            elif n == 1:
-                                print("Try Again")
-                                continue
-                            break
+            guess = input("Enter your guessed word:")
+
+            if words2[i] == guess:
+                print("Bravo!")
+                break
 
             else:
-                exit()
-                if result2 != "Lost":
+                n -= 1
 
-                    # Level 3
+                if n == 0:
+                    print("Incorrect! you have lost the game.")
+                    result2 += "Lost"
+                    exit()
 
-                    print("This is Level 3")
+                elif n == 1:
+                    print("Try Again")
+                    continue
 
-                    words3 = {1: "psychology",2: "demonstrate",3: "pneumonia",4: "homogeneous",5: "conscience"}
+                break
 
-                    j_words3 = {1: "yglopysoho",2: "omrdtneaest",3: "uenonpima",4: "esemoohgnoue",5: "sncceionse"}
 
-                    for i in j_words3:
+    if result2 != "Lost":
 
-                        n = 2
+        # Level 3
 
-                        while n > 0:
+        print("This is Level 3")
 
-                            print("Your word is:", j_words3[i])
+        words3 = {1: "psychology", 2: "demonstrate", 3: "pneumonia", 4: "homogeneous", 5: "conscience"}
 
-                            guess = input("Enter your guessed word:")
+        j_words3 = {1: "yglopysoho", 2: "omrdtneaest", 3: "uenonpima", 4: "esemoohgnoue", 5: "sncceionse"}
 
-                            if words3[i] == guess:
-                                print("Bravo!")
-                                break
+        for i in j_words3:
 
-                            else:
-                                n -= 1
+            n = 2
 
-                                if n == 0:
-                                    print("Incorrect! you have lost the game.")
-                                    exit()
+            while n > 0:
 
-                                elif n == 1:
-                                    print("Try Again")
-                                    continue
-                                break
+                print("Your word is:", j_words3[i])
+
+                guess = input("Enter your guessed word:")
+
+                if words3[i] == guess:
+                    print("Bravo!")
+                    break
+
+                else:
+                    n -= 1
+
+                    if n == 0:
+                        print("Incorrect! you have lost the game.")
+                        exit()
+
+                    elif n == 1:
+                        print("Try Again")
+                        continue
+
+                    break
